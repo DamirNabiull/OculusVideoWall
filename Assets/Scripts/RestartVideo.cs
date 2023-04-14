@@ -31,6 +31,7 @@ public class RestartVideo : MonoBehaviour
         }
         else if (OVRInput.Get(OVRInput.RawButton.Y) || OVRInput.Get(OVRInput.RawButton.B))
         {
+            _lastUpdate = Time.time;
             if (_isPlaying)
             {
                 player.Pause();
