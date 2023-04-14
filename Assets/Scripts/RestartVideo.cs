@@ -12,12 +12,12 @@ public class RestartVideo : MonoBehaviour
     
     private void Update()
     {
-        if (OVRInput.Get(OVRInput.RawButton.X))
+        if (OVRInput.Get(OVRInput.RawButton.X) || OVRInput.Get(OVRInput.RawButton.A))
         {
             player.Stop();
             player.Play();
         }
-        else if (OVRInput.Get(OVRInput.RawButton.Y))
+        else if (OVRInput.Get(OVRInput.RawButton.Y) || OVRInput.Get(OVRInput.RawButton.B))
         {
             if (_isPlaying)
             {
