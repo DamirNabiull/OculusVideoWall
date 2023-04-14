@@ -20,7 +20,7 @@ public class RestartVideo : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time - _lastUpdate < 0.5)
+        if (Time.time - _lastUpdate < 1.0)
             return;
         
         if (OVRInput.Get(OVRInput.RawButton.X) || OVRInput.Get(OVRInput.RawButton.A))
